@@ -29,6 +29,9 @@ jobs:
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5
+        with:
+          # 站点不存在时自动创建（GitHub Pages API）
+          enablement: true
 
       - name: 上传静态站点
         uses: actions/upload-pages-artifact@v3
